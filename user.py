@@ -1,7 +1,7 @@
 from config import Config
 from config import LOGGER
 from pyrogram import Client
-from pyrogram.session import StringSession
+from pyrogram.session.string_session import StringSession
 
 BOT_USERNAME = Config.BOT_USERNAME
 
@@ -26,3 +26,4 @@ class User(Client):
     async def stop(self, *args):
         await super().stop()
         self.LOGGER(__name__).info("Bot stopped. Bye.")
+        
