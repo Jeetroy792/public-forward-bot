@@ -26,12 +26,16 @@ class Bot(Client):
 
     async def start(self):
         await super().start()
+
         usr_bot_me = await self.get_me()
         self.set_parse_mode("html")
         self.LOGGER(__name__).info(
-            f"@{usr_bot_me.username}  started! "
+            f"@{usr_bot_me.username} started!"
         )
-        self.USER, self.USER_ID = await User().start()
+
+        # ✅ IMPORTANT FIX
+        if Config.SESSION:
+            self.USER, self.USER_ID = await User().start()
 
     async def stop(self, *args):
         await super().stop()
