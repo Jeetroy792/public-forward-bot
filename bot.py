@@ -5,6 +5,14 @@ from config import LOGGER
 
 from user import User
 import pyromod.listen
+import os
+import time
+from pyrogram import Client
+
+# সেশন স্টার্ট করার ঠিক আগে এটি যোগ করে দেখতে পারেন
+# যদি পাইগ্রামের ইন্টারনাল অফসেট কাজ না করে তবে এটি সার্ভার ভেদে সমস্যা করে
+
+
 
 
 class Bot(Client):
