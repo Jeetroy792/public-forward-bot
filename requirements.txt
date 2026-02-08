@@ -1,8 +1,7 @@
-TgCrypto
-pyrogram
-Dnspython
+pyrogram==1.4.16
+tgcrypto
 pyromod
+dnspython
 umongo==2.3.0
 motor==2.3.0
 pytz
-asyncio
