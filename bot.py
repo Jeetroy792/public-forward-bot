@@ -33,7 +33,7 @@ class Bot(Client):
             f"@{usr_bot_me.username} started!"
         )
 
-        # ✅ IMPORTANT FIX
+        # ✅ USER SESSION ONLY IF SESSION EXISTS
         if Config.SESSION:
             self.USER, self.USER_ID = await User().start()
 
