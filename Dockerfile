@@ -1,13 +1,13 @@
-ENV TZ="Asia/Kolkata"FROM python:3.9
+FROM python:3.9
+
+# টাইমজোন সেট করার জন্য
+ENV TZ="Asia/Kolkata"
 
 WORKDIR /app
 
-COPY requirements.txt /app/
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip3 install -r requirements.txt
+COPY . .
 
-COPY . /app
-
-CMD python3 main.py
-RUN apt-get update && apt-get install -y ntpdate && ntpdate -s time.nist.gov
-ENV TZ="Asia/Kolkata"
+CMD ["python", "main.py"]
