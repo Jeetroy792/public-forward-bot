@@ -19,8 +19,7 @@ class User(Client):
     async def start(self):
         await super().start()
         if BOT_USERNAME:
-            await
-            self.send_message(chat_id=BOT_USERNAME, text="/forward")
+            await self.send_message(chat_id=BOT_USERNAME, text="/forward")
         me = await self.get_me()
         return self, me.id
 
