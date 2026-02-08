@@ -1,4 +1,4 @@
-FROM python:3.9
+ENV TZ="Asia/Kolkata"FROM python:3.9
 
 WORKDIR /app
 
@@ -10,3 +10,4 @@ COPY . /app
 
 CMD python3 main.py
 RUN apt-get update && apt-get install -y ntpdate && ntpdate -s time.nist.gov
+ENV TZ="Asia/Kolkata"
