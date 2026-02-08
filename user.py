@@ -1,15 +1,18 @@
 from config import Config
 from config import LOGGER
-from pyrogram import Client, __version__
+from pyrogram import Client
+from pyrogram.session import StringSession
 import asyncio
-BOT_USERNAME=Config.BOT_USERNAME
+
+BOT_USERNAME = Config.BOT_USERNAME
+
 
 class User(Client):
     def __init__(self):
         super().__init__(
-            Config.SESSION,
-            api_hash=Config.API_HASH,
+            session=StringSession(Config.SESSION),
             api_id=Config.API_ID,
+            api_hash=Config.API_HASH,
             workers=10
         )
         self.LOGGER = LOGGER
