@@ -18,7 +18,7 @@
 * `OWNER_ID` Telegram Id of Owner.
 * `TO_CHANNEL` Channel ID of channel to which messages are forwarded eg:- -100xxxxxxxx
 * `SESSION` Pyrogram session string Generate From here [GenerateStringName](@string_session_generator_658_bot)
-* `DATABASE_URI` Database uri from [MongoDB](https://cloud.mongodb.com/)
+* `DATABASE_URI` Database url from [MongoDB](https://cloud.mongodb.com/)
 * `DATABASE_NAME` Database Cluster name
 * `COLLECTION_NAME` Database Collection name.
 
